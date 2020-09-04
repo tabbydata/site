@@ -1,24 +1,23 @@
 # ----
 # Site
 
-title: Hydra Template
-url: "https://proud-alligator.cloudvent.net"
+title: Tabby Data
+url: "https://www.tabbydata.com"
 baseurl:
 google_analytics_key:
 google_maps_javascript_api_key:
 disqus_shortname:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
-logo: /siteicon.png
 description: Product marketing template for Jekyll.
 author:
-  name:
-  email:
-  twitter: # twitter username without the @ symbol
+  name: Tabby Data
+  email: contact@tabbydata.com
+  twitter: tabbydata # twitter username without the @ symbol
 social:
-  name: Hydra Template
+  name: Tabby Data
   links:
-    - https://github.com/CloudCannon/hydra-jekyll-template
+    - https://www.tabbydata.com
 
 # -----
 # Build
@@ -30,7 +29,7 @@ collections:
     _hide_content: true
 
 paginate: 10
-paginate_path: "/blog/:num/"
+paginate_path: "/:num/" # for blog sub-path: "/blog/:num/"
 permalink: pretty
 
 defaults:
@@ -62,7 +61,7 @@ defaults:
     scope:
       path: "index.html"
     values:
-      layout: "default"
+      layout: "page" # back to "default" for real index.html
   -
     scope:
       path: "contact.html"
