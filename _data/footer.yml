@@ -1,0 +1,9 @@
+- links:
+  - name: Twitter
+    link: https://twitter.com/tabbydata/
+    social_icon: Twitter
+    new_window: true
+  - name: RSS
+    link: /feed.xml
+    social_icon: RSS
+    new_window: false
