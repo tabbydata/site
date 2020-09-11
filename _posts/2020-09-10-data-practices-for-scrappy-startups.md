@@ -1,5 +1,5 @@
 ---
-date: 2020-08-10
+date: 2020-09-10
 title: Data practices for scrappy startups
 categories:
 author_staff_member: dave
