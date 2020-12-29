@@ -60,7 +60,7 @@ defaults:
     scope:
       path: "index.html"
     values:
-      layout: "page" # back to "default" for real index.html
+      layout: "default"
   -
     scope:
       path: "contact.html"

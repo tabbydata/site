@@ -1,59 +1,69 @@
 <!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NLCHFDK');</script>
+  <!-- End Google Tag Manager -->
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NLCHFDK');</script>
-<!-- End Google Tag Manager -->
+  {% seo %}
+  {% feed_meta %}
 
-		{% seo %}
-		{% feed_meta %}
-
-		<link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
-		<link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
-	</head>
-	<body>
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link href="/compiled.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+</head>
+<body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLCHFDK"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-		<header>
-			<div class="container">
-				<div class="company-name"><a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/logo.svg" alt="Hydra Logo" width="95" height="33" /></a></div>
-				{% include navigation.html %}
-			</div>
-		</header>
-		{{ content }}
-		<footer>
-			<div class="container">
-				<div class="footer-columns">
-					{% for column in site.data.footer %}
-					<ul class="footer-links">
-						{% for link in column.links %}
-							<li><a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" {% if link.social_icon %}class="{{ link.social_icon }}-icon"{% endif %}>
-								{% if link.social_icon %}
-									{% include social-icon.html icon=link.social_icon %}
-								{% endif %}
-								{{ link.name }}</a></li>
-						{% endfor %}
-					</ul>
-					{% endfor %}
-				</div>
-				<p class="copyright">&copy; {{ site.time | date: '%Y' }} Tabby Data • <a href="/terms">Terms</a> &amp; <a href="/privacy">Privacy</a></p>
-			</div>
-		</footer>
-		<script>
-			document.getElementById("open-nav").onclick = function () {
-				document.body.classList.toggle("nav-open");
-				return false;
-			};
-		</script>
-<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/aee23bb6fa44c13d71e96e246/4c3a2bc7c2f7008cac4bb5aea.js");</script>
-	</body>
+
+  <div class="relative bg-gray-50 overflow-visible">
+    <div class="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full overflow-hidden" aria-hidden="true">
+  
+     {% include navigation.html %}
+
+     {% if page.url == "/" %}
+      <main class="my-16 mx-auto max-w-7xl px-4 sm:mt-24">
+        <div class="text-center">
+          <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+            <span class="block xl:inline"><span class="text-green-500">Big data</span> for</span>
+            <span class="block xl:inline"><span class="text-green-500">small startups</span>.</span>
+          </h1>
+        </div>
+      </main>
+     {% endif %}
+    </div>
+  </div>
+  {{ content }}
+<footer class="bg-gray-800 mt-16">
+  <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+    <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+      <div class="px-5 py-2">
+        <a href="/privacy" class="text-base text-gray-300 hover:text-white">
+          Privacy policy
+        </a>
+      </div>
+
+      <div class="px-5 py-2">
+        <a href="/terms" class="text-base text-gray-300 hover:text-white">
+          Terms of service
+        </a>
+      </div>
+
+      <div class="px-5 py-2">
+        <a href="/contact" class="text-base text-gray-300 hover:text-white">
+          Contact us
+        </a>
+      </div>
+    </nav>
+  </div>
+</footer>
+</body>
 </html>
